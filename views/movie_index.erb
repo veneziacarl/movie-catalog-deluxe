@@ -1,0 +1,12 @@
+movie index
+
+<ul>
+<% @movies.each do |movie| %>
+  <li><a href="/movies/<%= movie.id %>"><%= movie.title %></a>
+    <%= movie.year %>
+    <%= movie.genre %>
+    <%= movie.rating %>
+    <%= movie.studio %>
+  </li>
+<% end %>
+</ul>

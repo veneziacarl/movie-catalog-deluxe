@@ -1,0 +1,16 @@
+movie show page
+<%= @movie.title %>
+<%= @movie.year %>
+<%= @movie.genre %>
+<%= @movie.studio %>
+<%= @movie.rating %>
+
+<ul>
+<% @cast_members.each do |cast| %>
+  <% cast.roles.each do |role| %>
+    <li>
+      <a href="/actors/<%= cast.id %>"><%= cast.name %></a>: <%= role.values[0] %>
+    </li>
+  <% end %>
+<% end %>
+</ul>

@@ -1,0 +1,6 @@
+actor show page
+<%= @actor.name %>
+
+<% @all_movies_and_characters.each do |mca| %>
+  <a href="/movies/<%= mca[0].id %>"><%= mca[0].title %></a>: <%= mca[1] %>
+<% end %>
